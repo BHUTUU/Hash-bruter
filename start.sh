@@ -1,4 +1,9 @@
 #!/bin/env bash
+args="$@"
+comand="start.sh ${args}"
+if [[ ${comand} == 'start.sh -u' ]]; then
+git pull
+else
 CWD=$(pwd)
 #<<<----------colour substitution by variables---------->>>
 B0="$(printf '\033[100m')" S0="$(printf '\033[30m')"
@@ -144,8 +149,4 @@ case ${hAsh1} in
     printf "${S2}[${S1}!${S2}]${S1}SORRY BUT BRUTEFORCE FOR THIS TYPE OF CODE IS NOT AVAILABLE!!${R0}\n"
     ;;
 esac
-
-
-
-
-
+fi
