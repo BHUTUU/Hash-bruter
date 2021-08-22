@@ -49,11 +49,12 @@ printf "${S2}ENTER YOUR OPTION=> ${S7}"
 read OPTON
 case ${OPTON} in
     1|01)
-PATH="rockyou.txt"
-printf "${S2}Enter your any hash code :)==> "
-read HASSH
-hAsh=$(echo -e "$HASSH" | awk '{print length}')
-break
+printf "${S2}[${S1}!${S2}]${S1}Sorry but due to some issues auto mode has been disabled!!use 2${R0}\n"
+#PATH="rockyou.txt"
+#printf "${S2}Enter your any hash code :)==> "
+#read HASSH
+#hAsh=$(echo -e "$HASSH" | awk '{print length}')
+#break
 ;;
     2|02)
 
