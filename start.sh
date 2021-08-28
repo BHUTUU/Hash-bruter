@@ -16,6 +16,12 @@ S5="\033[35m" B5="\033[45m"
 S6="\033[36m" B6="\033[46m"
 S7="\033[37m" B7="\033[47m"
 R0="\033[00m" R1="\033[0;1m"
+#<<<-----------Python2 as requirement--------->>>
+if ! hash python2 > /dev/null 2>&1; then
+printf "\n${S2}[${S1}!${S2}]${1}Python2 not found!!${R0}\n"
+printf "\n${S4}Installing python2 ........${R0}\n"
+apt install python2 -y > /dev/null 2>&1
+fi
 #<<<---------Force exit detection--------->>>
 exit_on_signal_SIGINT () {
     printf "\n${S1} [✗] Received INTR call - Exiting...${R0}\n"
