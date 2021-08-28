@@ -34,7 +34,7 @@ printf "${S3}░█─░█ ░█─░█ ░█▄▄▄█ ░█─░█ 
 echo
 printf "${B5}${S2}Authoured by:-${B5}${B3}${S1} Suman kumar ~BHUTUU${R0}${R1}\n"; wait
 echo
-printf "${S2}<<<${S1}----------${B1}${S6}Welcome to hash bruting program${R0}${R1}${R1}----------${S2}>>>${R0}\n"; wait
+printf "${S2}<<<${S1}----------${B1}${S6}Welcome to hash bruting program${R0}${R1}${R1}${S1}----------${S2}>>>${R0}\n"; wait
 }
 
 _bmd5() {
@@ -92,6 +92,7 @@ printf "${S1}╚═════╝░╚═╝░░╚═╝╚═╝░░╚�
 echo
 }
 #<<<---------------Program--------------->>>
+while true; do
 _bmain
 echo
 printf "${S1}:::${S2}Choose your mode from the followings${S1}:::${R0}\n"
@@ -120,6 +121,9 @@ echo
 printf "${S2}Attach your dictonary${S5}(${S7}path/name${S5})${S2}=> ${S1}"
 read dict
 break
+elif [[ ${opt} == 'exit' || ${opt} == 'quit' ]]; then
+printf "${S5}Exiting.......${R0}\n\n"
+exit 1
 else
 echo
 printf "${S2}[${S1}!${S2}]${S1} Invalid option!!${R0}\n"
@@ -163,4 +167,4 @@ echo
 printf "${S2}[${S1}!${S2}]${S1}Sorry! Bruteforce for this type of code is unavailable${R0}\n"
 echo
 esac
-
+done
